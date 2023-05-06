@@ -26,9 +26,11 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.StarBorder
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -53,6 +55,17 @@ fun ReplyEmailListItem(
             .padding(horizontal = 16.dp, vertical = 4.dp)
             .semantics { selected = isSelected }
             .clickable { navigateToDetail(email.id) },
+        /* BEGIN-4.4 - Adding colors to app */
+        // By default, it uses surface variant color for the container color to
+        // provide a clear separation between surface and card color.
+        // You can further highlight some items that are important by providing
+        // secondary color tones.
+        colors = CardDefaults.cardColors(
+            containerColor = if (email.isImportant)
+                MaterialTheme.colorScheme.secondaryContainer
+            else MaterialTheme.colorScheme.surfaceVariant
+        )
+        /* END-4.4 */
     ) {
         Column(
             modifier = Modifier

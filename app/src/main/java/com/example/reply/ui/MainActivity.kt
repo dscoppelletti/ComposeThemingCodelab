@@ -22,11 +22,14 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.reply.data.LocalEmailsDataProvider
+import com.example.reply.ui.theme.AppTheme
 
 /**
  * Entry point activity where you start the Reply app.
@@ -40,15 +43,45 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val uiState by viewModel.uiState.collectAsState()
-            ReplyApp(
-                replyHomeUIState = uiState,
-                closeDetailScreen = {
-                    viewModel.closeDetailScreen()
-                },
-                navigateToDetail = { emailId ->
-                    viewModel.setSelectedEmail(emailId)
+            /* BEGIN-4.1 - Generating color schemes */
+//            ReplyApp(
+//                replyHomeUIState = uiState,
+//                closeDetailScreen = {
+//                    viewModel.closeDetailScreen()
+//                },
+//                navigateToDetail = { emailId ->
+//                    viewModel.setSelectedEmail(emailId)
+//                }
+//            )
+            /* BEGIN-4.4 - Adding colors to app */
+//            AppTheme {
+//                ReplyApp(
+//                    replyHomeUIState = uiState,
+//                    closeDetailScreen = {
+//                        viewModel.closeDetailScreen()
+//                    },
+//                    navigateToDetail = { emailId ->
+//                        viewModel.setSelectedEmail(emailId)
+//                    }
+//                )
+//            }
+//            /* END-4.1 */
+            AppTheme {
+                // Provide contrast against the list item and the search bar on
+                // top of it
+                Surface(tonalElevation = 5.dp /* default 8 */) {
+                    ReplyApp(
+                        replyHomeUIState = uiState,
+                        closeDetailScreen = {
+                            viewModel.closeDetailScreen()
+                        },
+                        navigateToDetail = { emailId ->
+                            viewModel.setSelectedEmail(emailId)
+                        }
+                    )
                 }
-            )
+            }
+            /* END-4.4 */
         }
     }
 }
@@ -62,10 +95,21 @@ class MainActivity : ComponentActivity() {
     name = "DefaultPreviewLight"
 )
 @Composable
-fun ReplyAppPreviewLight() {
-    ReplyApp(
-        replyHomeUIState = ReplyHomeUIState(
-            emails = LocalEmailsDataProvider.allEmails
+/* BEGIN-4.1 - Generating color schemes */
+//fun ReplyAppPreviewLight() {
+//    ReplyApp(
+//        replyHomeUIState = ReplyHomeUIState(
+//            emails = LocalEmailsDataProvider.allEmails
+//        )
+//    )
+//}
+fun ReplyAppPreview() {
+    AppTheme {
+        ReplyApp(
+            replyHomeUIState = ReplyHomeUIState(
+                emails = LocalEmailsDataProvider.allEmails
+            )
         )
-    )
+    }
 }
+/* END-4.1 */

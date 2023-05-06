@@ -16,6 +16,7 @@
 
 package com.example.reply.ui.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -48,6 +49,13 @@ fun ReplyEmailThreadItem(
         modifier = modifier
             .fillMaxWidth()
             .padding(16.dp)
+            /* BEGIN-4.4 - Adding colors to app */
+            // By default, List item falls back to default tonal surface color.
+            // You'll apply background color to the list item to create
+            // separation and add padding to provide spacing around our
+            // background.
+            .background(MaterialTheme.colorScheme.background)
+            /* END-4.4 */
             .padding(20.dp)
     ) {
         Row(modifier = Modifier.fillMaxWidth()) {

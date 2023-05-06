@@ -16,6 +16,7 @@
 
 package com.example.reply.ui.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -46,7 +47,12 @@ fun ReplySearchBar(modifier: Modifier = Modifier) {
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(16.dp)
+            /* BEGIN 4.4 - Adding colors to app */
+            // By default, background falls back to the default base surface.
+            // You can provide a background to give a clear separation.
+            .background(MaterialTheme.colorScheme.background),
+            /* END-4.4 */
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(

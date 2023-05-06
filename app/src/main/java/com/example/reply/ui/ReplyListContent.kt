@@ -30,6 +30,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LargeFloatingActionButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -63,6 +64,12 @@ fun ReplyInboxScreen(
         )
 
         LargeFloatingActionButton(
+            /* BEGIN-4.4 - Adding colors to app */
+            // Enhance the appearance of the floating action button (FAB) so it
+            // can stand out as a call to action button.
+            containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+            contentColor = MaterialTheme.colorScheme.onTertiaryContainer,
+            /* END-4.4 */
             onClick = { /*Click Implementation*/ },
             modifier = Modifier
                 .align(Alignment.BottomEnd)
