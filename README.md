@@ -3,6 +3,14 @@
 This folder contains the source code for
 the [Theming in Compose with Material 3 Codelab](https://developer.android.com/codelabs/jetpack-compose-theming)
 
+## References
+
+* [Material Design Component](http://material.io/components)
+* [Material Theming](http://material.io/design/material-theming)
+* [Color scheme](http://m3.material.io/styles/color/overview)
+* [Typography](http://m3.material.io/styles/typography/overview)
+* [Shapes](http://m3.material.io/styles/shape/overview)
+
 ## Screenshots
 
 ![Theming states](screenshots/theming.png "Theming states")
