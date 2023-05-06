@@ -10,6 +10,7 @@ the [Theming in Compose with Material 3 Codelab](https://developer.android.com/c
 * [Material Theme Builder](http://m3.material.io/theme-builder#/custom)
 * [Color scheme](http://m3.material.io/styles/color/overview)
 * [Color scheme and color role](http://m3.material.io/styles/color/the-color-system/key-colors-tones)
+* [Dynamic color](http://m3.material.io/styles/color/dynamic-color/overview)
 * [Typography](http://m3.material.io/styles/typography/overview)
 * [Shapes](http://m3.material.io/styles/shape/overview)
 
