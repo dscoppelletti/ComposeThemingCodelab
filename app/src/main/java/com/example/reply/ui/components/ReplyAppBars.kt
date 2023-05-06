@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.MoreVert
@@ -48,10 +49,15 @@ fun ReplySearchBar(modifier: Modifier = Modifier) {
         modifier = modifier
             .fillMaxWidth()
             .padding(16.dp)
-            /* BEGIN 4.4 - Adding colors to app */
+            /* BEGIN-4.4 - Adding colors to app */
             // By default, background falls back to the default base surface.
             // You can provide a background to give a clear separation.
-            .background(MaterialTheme.colorScheme.background),
+            .background(
+                MaterialTheme.colorScheme.background,
+                /* BEGIN-7.2 - Working with shape */
+                CircleShape
+                /* END-7.2 */
+            ),
             /* END-4.4 */
         verticalAlignment = Alignment.CenterVertically
     ) {

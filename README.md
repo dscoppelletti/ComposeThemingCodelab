@@ -13,6 +13,7 @@ the [Theming in Compose with Material 3 Codelab](https://developer.android.com/c
 * [Dynamic color](http://m3.material.io/styles/color/dynamic-color/overview)
 * [Typography](http://m3.material.io/styles/typography/overview)
 * [Shapes](http://m3.material.io/styles/shape/overview)
+* [Shape documentation](http://m3.material.io/styles/shape/shape-scale-tokens)
 
 ## Screenshots
 

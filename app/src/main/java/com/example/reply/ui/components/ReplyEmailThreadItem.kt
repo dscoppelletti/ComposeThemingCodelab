@@ -54,7 +54,13 @@ fun ReplyEmailThreadItem(
             // You'll apply background color to the list item to create
             // separation and add padding to provide spacing around our
             // background.
-            .background(MaterialTheme.colorScheme.background)
+            .background(
+                MaterialTheme.colorScheme.background,
+                /* BEGIN-7.2 - Working with shape */
+                // Uniform list appearance between home screen and detail page.
+                MaterialTheme.shapes.medium
+                /* END-7.2 */
+            )
             /* END-4.4 */
             .padding(20.dp)
     ) {

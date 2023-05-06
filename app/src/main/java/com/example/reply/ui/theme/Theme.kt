@@ -179,6 +179,9 @@ fun AppTheme(
         /* BEGIN-6.1 - Defining typography */
         typography = typography,
         /* END-6.1 */
+        /* BEGIN-7.1 - Defining shapes */
+        shapes = shapes,
+        /* END-7.1 */
         content = content
     )
 }
