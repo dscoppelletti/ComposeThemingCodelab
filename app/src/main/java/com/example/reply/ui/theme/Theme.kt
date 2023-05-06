@@ -176,6 +176,9 @@ fun AppTheme(
 
     MaterialTheme(
         colorScheme = colors,
+        /* BEGIN-6.1 - Defining typography */
+        typography = typography,
+        /* END-6.1 */
         content = content
     )
 }

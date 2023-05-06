@@ -85,9 +85,15 @@ fun ReplyEmailListItem(
                 ) {
                     Text(
                         text = email.sender.firstName,
+                        /* BEGIN-6.2 - Working with typography */
+                        style = MaterialTheme.typography.labelMedium
+                        /* END-6.2 */
                     )
                     Text(
                         text = email.createdAt,
+                        /* BEGIN-6.2 - Working with typography */
+                        style = MaterialTheme.typography.labelMedium
+                        /* END-6.2 */
                     )
                 }
                 IconButton(
@@ -105,11 +111,17 @@ fun ReplyEmailListItem(
 
             Text(
                 text = email.subject,
+                /* BEGIN-6.2 - Working with typography */
+                style = MaterialTheme.typography.titleLarge,
+                /* END-6.2 */
                 modifier = Modifier.padding(top = 12.dp, bottom = 8.dp),
             )
             Text(
                 text = email.body,
                 maxLines = 2,
+                /* BEGIN-6.2 - Working with typography */
+                style = MaterialTheme.typography.bodyLarge,
+                /* END-6.2 */
                 overflow = TextOverflow.Ellipsis
             )
         }
