@@ -27,7 +27,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.StarBorder
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -92,8 +91,12 @@ fun ReplyEmailListItem(
                     Text(
                         text = email.createdAt,
                         /* BEGIN-6.2 - Working with typography */
-                        style = MaterialTheme.typography.labelMedium
+                        style = MaterialTheme.typography.labelMedium,
                         /* END-6.2 */
+                        /* BEGIN-8 - Emphasis */
+                        // Reduce emphasis
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                        /* END-8 */
                     )
                 }
                 IconButton(
@@ -122,6 +125,10 @@ fun ReplyEmailListItem(
                 /* BEGIN-6.2 - Working with typography */
                 style = MaterialTheme.typography.bodyLarge,
                 /* END-6.2 */
+                /* BEGIN-8 - Emphasis */
+                // Reduce emphasis
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                /* END-8 */
                 overflow = TextOverflow.Ellipsis
             )
         }
